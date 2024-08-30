@@ -7,6 +7,15 @@ import (
 	"github.com/jrenjq/MiniChatSentryBot/utils"
 )
 
+/*
+Helper function: creates a URI string from a URI struct.
+
+parameters:
+  - uri_struct_ptr *structs.URI: pointer to a URI struct.
+
+returns:
+  - string: the URI string built from URI struct.
+*/
 func get_uri_string_from_struct(uri_struct_ptr *structs.URI) string {
 	return fmt.Sprintf(
 		"%s%s/%s?%s=%s",
@@ -18,8 +27,17 @@ func get_uri_string_from_struct(uri_struct_ptr *structs.URI) string {
 	)
 }
 
+/*
+Creates a URI string of updates from the environment file.
+
+parameters:
+  - env_file string: name of environment file that contains needed info.
+
+returns:
+  - string: the URI string built from URI struct.
+*/
 func Get_update_uri_from_env_file(env_file string) string {
-	utils.Load_env_file(".env")
+	utils.Load_env_file(env_file)
 	uri_struct := structs.URI{
 		API_URL:                utils.Get_env_value_or_err("API_URL"),
 		BOT_TOKEN:              utils.Get_env_value_or_err("BOT_TOKEN"),
