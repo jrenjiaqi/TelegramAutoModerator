@@ -1,6 +1,6 @@
 # **MiniChatSentryBot** : <small>a Golang Telegram Bot</small>
 
-## 1. About the Project
+## 1. About the Project ([Github Repository](https://github.com/jrenjq/MiniChatSentryBot))
 - This is a Telegram Bot, programmable to perform admin tasks.
 - Written in Golang, aims to be stateless (e.g. no need database etc) and deploy-anywhere (with internet).
 - Originally developed to manage a university Telegram group.

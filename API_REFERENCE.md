@@ -11,7 +11,6 @@ From the [documentation](https://core.telegram.org/bots/api#making-requests):
 - `/getUpdates` retrieves all updates to anything in the bot's groups from the past 24 hours. 
 - Bot must configured in its Telegram group to admin, and be able to access messages.
 - **TO RETRIEVE REACTIONS**: retrieved iif request specifies `allowed_updates` with e.g. `message_reaction` in the request body ([see here](https://core.telegram.org/bots/api#update)).
-- Regardless of `allowed_updates`, you will always have the message text.
 s
 ### 2.1. Get Message with Reaction `[HTTP GET]` `<base url>/getUpdates?allowed_updates=message_reaction` 
     ```
@@ -80,5 +79,4 @@ s
         }
         }
     ]
-    }
     ```
