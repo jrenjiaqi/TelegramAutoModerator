@@ -8,6 +8,8 @@
 - `[doc]` Added [`Food For Thought`](DEVLOG.md#3-food-for-thought) section under [`DEVLOG`](DEVLOG.md).
 - `[ft.]` Added [`/code/utils/env.go`](/code/utils/env.go) to load env files.
 - `[ft.]` Added [`/code/repo/getURI.go`](/code/repo/getURI.go) to represent getting URI path from env.
+- `[ft.]` Added [`/code/repo/getUpdateJSON.go`](/code/repo/getUpdateJSON.go) to get JSON of updates seen by Telegram bot (e.g. messages, message reactions).
+- `[ft.]` Added [`/code/repo/getMsgToDelete.go`](/code/repo/getMsgToDelete.go) to get messages to delete from thumbs down reaction updates (as per response JSON).
 
 ## 2. Tech Debt
 - nothing here; let's hope it stays that way.
