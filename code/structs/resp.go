@@ -66,3 +66,8 @@ type Update_response struct {
 		} `json:"message_reaction,omitempty"`
 	} `json:"result"`
 }
+
+type Delete_response struct {
+	Ok     bool `json:"ok"`
+	Result bool `json:"result"`
+}

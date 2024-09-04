@@ -7,10 +7,16 @@ import (
 )
 
 func main() {
-	thumbs_down_count_to_del_msg := 2
+	uri_env_filename := ".env" // environment filename with uri information.
+
+	thumbs_down_count_to_del_msg, debug_mode := repo.Get_config_values_from_env_file(
+		".conf",
+		"THUMBS_DOWN_COUNT_TO_DELETE_MSG",
+		"DEBUG_MODE",
+	)
 
 	// assemble URI string from environment file.
-	uri_string := repo.Get_update_uri_from_env_file(".env")
+	uri_string := repo.Get_update_uri_from_env_file(uri_env_filename)
 	log.Println(uri_string)
 
 	// get bot update JSON via HTTP GET to URI string.
@@ -24,7 +30,14 @@ func main() {
 	messages_to_delete := repo.Get_messages_to_delete_from_JSON(
 		get_response_JSON,
 		thumbs_down_count_to_del_msg,
-		true,
+		debug_mode,
 	)
 	log.Println(messages_to_delete)
+
+	// delete said messages via Telegram Bot API.
+	count, err := repo.Delete_messages(uri_env_filename, &messages_to_delete)
+	if err != nil {
+		panic(err)
+	}
+	log.Printf("deleted %d messages.\n", count)
 }

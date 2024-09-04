@@ -10,6 +10,7 @@ import (
 	"github.com/jrenjq/MiniChatSentryBot/utils"
 )
 
+// Helper function: unpacks the uid string into a message id struct.
 func get_message_id_struct_from_uid(uid string) structs.Telegram_message_id {
 	split_string := strings.Split(uid, ":")
 	chat_id, err := strconv.ParseInt(split_string[0], 10, 64)
@@ -60,7 +61,7 @@ func Get_messages_to_delete_from_JSON(
 	if is_debug_mode {
 		log.Printf("thumbs_down_message_uids: %v\n", thumbs_down_message_uids) // e.g. [-1002237832629:12 -1002237832629:15 -1002237832629:15]
 	}
-	thumbs_down_message_uid_count_map := utils.Count_string_slice_occurrences(thumbs_down_message_uids)
+	thumbs_down_message_uid_count_map := utils.Count_string_slice_occurrences(thumbs_down_message_uids) // create a count for how many thumbs down reactions there were.
 	messages_to_delete := []structs.Telegram_message_id{}
 	for uid, count := range thumbs_down_message_uid_count_map {
 		if count >= thumbs_down_count_to_del_msg {
@@ -71,8 +72,5 @@ func Get_messages_to_delete_from_JSON(
 			messages_to_delete = append(messages_to_delete, message_to_delete)
 		}
 	}
-	if is_debug_mode {
-		log.Println(messages_to_delete)
-	}
-	return messages_to_delete
+	return messages_to_delete // returns a slice of struct on messages eligible for deletion.
 }

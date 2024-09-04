@@ -17,7 +17,7 @@ Parameters:
 func Load_env_file(filename string) {
 	// if there is an err loading the .env file, log it.
 	if err := godotenv.Load(filename); err != nil {
-		log.Print("No .env file found")
+		log.Printf("No file %s found", filename)
 	}
 }
 

@@ -10,6 +10,7 @@
 - `[ft.]` Added [`/code/repo/getURI.go`](/code/repo/getURI.go) to represent getting URI path from env.
 - `[ft.]` Added [`/code/repo/getUpdateJSON.go`](/code/repo/getUpdateJSON.go) to get JSON of updates seen by Telegram bot (e.g. messages, message reactions).
 - `[ft.]` Added [`/code/repo/getMsgToDelete.go`](/code/repo/getMsgToDelete.go) to get messages to delete from thumbs down reaction updates (as per response JSON).
+- `[ft.]` Added [`/code/repo/deleteMsg.go`](/code/repo/deleteMsg.go) to delete messages that meets thumbs down count criteria.
 
 ## 2. Tech Debt
 - nothing here; let's hope it stays that way.
