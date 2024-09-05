@@ -1,4 +1,3 @@
 .env*
 .conf*
-sample_resp.json
 bin/*
