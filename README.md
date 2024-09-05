@@ -6,7 +6,7 @@
 - Originally developed to manage a university Telegram group.
 
 ## 2. What Can It Do?
-- `v0.1`: **[[CURRENTLY DEFUNCT DUE TO [API CHANGES](https://bugs.telegram.org/c/43188)]]** the bot finds messages with **3 or more** counts of "👎" reactions, and **deletes that message** `[downvote]`
+- `v0.1`: **[[CURRENTLY DEFUNCT DUE TO UNDOCUMENTED API CHANGES WHICH REMOVES REACTIONS FROM UPDATES]]** the bot finds messages with **3 or more** counts of "👎" reactions, and **deletes that message** `[downvote]`
 
 
 ## 3. How Does the Code Work?
