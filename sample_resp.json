@@ -1,0 +1,371 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 147090554,
+      "message": {
+        "message_id": 9,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373596,
+        "forward_origin": {
+          "type": "user",
+          "sender_user": {
+            "id": 600000000,
+            "is_bot": false,
+            "first_name": "XXX",
+            "last_name": "XXX",
+            "username": "XXX"
+          },
+          "date": 1725348390
+        },
+        "forward_from": {
+          "id": 600000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "last_name": "XXX",
+          "username": "XXX"
+        },
+        "forward_date": 1725348390,
+        "text": "Hi, has anyone seen my student ID (123456), do reply to my message. 🙏🏻🙏🏻"
+      }
+    },
+    {
+      "update_id": 147090555,
+      "message": {
+        "message_id": 10,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373747,
+        "text": "hello"
+      }
+    },
+    {
+      "update_id": 147090556,
+      "message": {
+        "message_id": 11,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373753,
+        "text": "oi"
+      }
+    },
+    {
+      "update_id": 147090557,
+      "message": {
+        "message_id": 12,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373760,
+        "text": "ni ma ma mei you mao"
+      }
+    },
+    {
+      "update_id": 147090558,
+      "message": {
+        "message_id": 13,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373794,
+        "new_chat_participant": {
+          "id": 600000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "last_name": "XXX",
+          "username": "XXX"
+        },
+        "new_chat_member": {
+          "id": 817918623,
+          "is_bot": false,
+          "first_name": "XXX",
+          "last_name": "XXX",
+          "username": "XXX"
+        },
+        "new_chat_members": [
+          {
+            "id": 817918623,
+            "is_bot": false,
+            "first_name": "XXX",
+            "last_name": "XXX",
+            "username": "XXX"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 147090559,
+      "message_reaction": {
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "message_id": 12,
+        "user": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "date": 1725373839,
+        "old_reaction": [],
+        "new_reaction": [
+          {
+            "type": "emoji",
+            "emoji": "👎"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 147090560,
+      "message": {
+        "message_id": 14,
+        "from": {
+          "id": 600000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "last_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373885,
+        "text": "Test"
+      }
+    },
+    {
+      "update_id": 147090561,
+      "message": {
+        "message_id": 15,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373887,
+        "forward_origin": {
+          "type": "user",
+          "sender_user": {
+            "id": 800000000,
+            "is_bot": false,
+            "first_name": "XXX",
+            "username": "XXX"
+          },
+          "date": 1725373760
+        },
+        "forward_from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "forward_date": 1725373760,
+        "text": "ni ma ma mei you mao"
+      }
+    },
+    {
+      "update_id": 147090562,
+      "message_reaction": {
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "message_id": 15,
+        "user": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "date": 1725373890,
+        "old_reaction": [],
+        "new_reaction": [
+          {
+            "type": "emoji",
+            "emoji": "👎"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 147090563,
+      "message_reaction": {
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "message_id": 15,
+        "user": {
+          "id": 817918623,
+          "is_bot": false,
+          "first_name": "XXX",
+          "last_name": "XXX",
+          "username": "XXX"
+        },
+        "date": 1725373893,
+        "old_reaction": [],
+        "new_reaction": [
+          {
+            "type": "emoji",
+            "emoji": "👎"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 147090564,
+      "message_reaction": {
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "message_id": 14,
+        "user": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "date": 1725373894,
+        "old_reaction": [],
+        "new_reaction": [
+          {
+            "type": "emoji",
+            "emoji": "⚡"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 147090565,
+      "message": {
+        "message_id": 16,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX"
+        },
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "date": 1725373897,
+        "text": "ok thanks"
+      }
+    },
+    {
+      "update_id": 147090566,
+      "message": {
+        "message_id": 3,
+        "from": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX",
+          "language_code": "en"
+        },
+        "chat": {
+          "id": 800000000,
+          "first_name": "XXX",
+          "username": "XXX",
+          "type": "private"
+        },
+        "date": 1725375611,
+        "text": "/start",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 6,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 147090567,
+      "message_reaction": {
+        "chat": {
+          "id": -1002237832629,
+          "title": "BotHangar",
+          "type": "supergroup"
+        },
+        "message_id": 14,
+        "user": {
+          "id": 800000000,
+          "is_bot": false,
+          "first_name": "XXX",
+          "username": "XXX",
+          "language_code": "en"
+        },
+        "date": 1725383271,
+        "old_reaction": [
+          {
+            "type": "emoji",
+            "emoji": "⚡"
+          }
+        ],
+        "new_reaction": []
+      }
+    }
+  ]
+}
