@@ -6,7 +6,8 @@
 - Originally developed to manage a university Telegram group.
 
 ## 2. What Can It Do?
-- `v0.1`: the bot finds messages with **3 or more** counts of "👎" reactions, and **deletes that message** `[downvote]`
+- `v0.1`: **[[CURRENTLY DEFUNCT DUE TO [API CHANGES](https://bugs.telegram.org/c/43188)]]** the bot finds messages with **3 or more** counts of "👎" reactions, and **deletes that message** `[downvote]`
+
 
 ## 3. How Does the Code Work?
 First and foremost, take a gander at the [Telegram Bot documentation](https://core.telegram.org/bots).
@@ -27,7 +28,7 @@ You should **CREATE YOUR OWN BOT** via Telegram's @BotFather, get your own **BOT
 
 You could invite this bot as an existing instance on Telegram into your own Telegram group. And you will have to make it an admin, where it'll be able to do many, many things indeed.
 
-But you will **HAVE NO CONTROL OVER THE BOT**, because you don't have the **BOT API TOKEN**. Sometimes in the corner of your eye, you see the bot ... twitching ... talking to itself ... mumbling as it does its job.
+But you will **HAVE NO CONTROL OVER THE BOT**, because you don't have the **BOT API TOKEN**. Sometimes in the corner of your eye, you see the bot ... twitching ... talking to itself ... mumbling darkly as it does its job.
 
 The bot that is an admin in your group that you can't control. You can't know for sure what it'll do. And people who make Telegram bots rarely pass the opportunity to play tricks on silly folks. 
 
@@ -36,5 +37,4 @@ Don't be a silly folk :) Fork the code and host your own bot.
 ## 5. Other Documents
 - [`API_REFERENCE`](API_REFERENCE.md): APIs used and explanations.
 - [`DEVLOG`](DEVLOG.md): work done and tech debt.
-
-## 5. Setup Project for Development
+- [`SETUP`](SETUP.md): how to setup this project, for development and deployment.
