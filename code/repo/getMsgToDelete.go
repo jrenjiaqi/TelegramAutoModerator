@@ -30,13 +30,13 @@ func Get_messages_to_delete_from_JSON(
 	is_debug_mode bool,
 ) []structs.Telegram_message_id {
 	last_24h_updates := get_response_JSON.Result   // Telegram only gives bots last 24 hour's updates.
-	thumbs_down_message_uids := []string{}         // message with thumbs down = add one instance of message id in. vice versa.
+	thumbs_down_message_uids := []string{}         // message with thumbs dowgit puln = add one instance of message id in. vice versa.
 	for _, update_item := range last_24h_updates { // iterate through updates from last 24 hours.
 		// thumbs down action on a message => add one count of message id to thumbs down message id slice.
 		if len(update_item.MessageReaction.NewReaction) != 0 && // update item is a message reaction.
 			update_item.MessageReaction.NewReaction[0].Emoji == "👎" { // reaction is a thumbs down.
 
-			thumbs_down_message := structs.Telegram_message_id{Chat_id: update_item.MessageReaction.Chat.ID, Message_id: update_item.MessageReaction.MessageID}
+			thumbs_down_message := structs.Telegram_message_id{Chat_id: update_item.MessageReaction.Chat.ID, Message_id: update_item.MessageReaction.MessageId}
 			thumbs_down_message_uid := thumbs_down_message.Get_uid_string()
 			if is_debug_mode {
 				log.Printf("👎 detected! adding message %s to slice!\n", thumbs_down_message_uid)
@@ -47,7 +47,7 @@ func Get_messages_to_delete_from_JSON(
 		if len(update_item.MessageReaction.OldReaction) != 0 && // update item is a message reaction RETRACTION.
 			update_item.MessageReaction.OldReaction[0].Emoji == "👎" { // retracted reaction is a thumbs down.
 
-			thumbs_down_message := structs.Telegram_message_id{Chat_id: update_item.MessageReaction.Chat.ID, Message_id: update_item.MessageReaction.MessageID}
+			thumbs_down_message := structs.Telegram_message_id{Chat_id: update_item.MessageReaction.Chat.ID, Message_id: update_item.MessageReaction.MessageId}
 			thumbs_down_message_uid := thumbs_down_message.Get_uid_string()
 			if is_debug_mode {
 				log.Printf("👎 RETRACTION detected! removing message id %+v from slice!\n", thumbs_down_message_uid)
