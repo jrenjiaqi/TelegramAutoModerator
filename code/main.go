@@ -35,7 +35,7 @@ func main() {
 	log.Println(messages_to_delete)
 
 	// delete said messages via Telegram Bot API.
-	count, err := repo.Delete_messages(uri_env_filename, &messages_to_delete)
+	count, err := repo.Delete_messages(uri_env_filename, &messages_to_delete, debug_mode)
 	if err != nil {
 		panic(err)
 	}
