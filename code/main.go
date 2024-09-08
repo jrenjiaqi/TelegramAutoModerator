@@ -12,6 +12,7 @@ func main() {
 	system_prompt_pathname := "./claude/prompts/systemPrompt.txt" // system prompt is SENSITIVE and should NOT be made public.
 
 	// get updates (e.g. messages, reactions) about the bot, from the Telegram Bot API.
+	// note: should call only once per execution. Telegram Bot API will limit consecutive calls with truncated information.
 	telegram_bot_updates := top.Get_updates_from_telegram(uri_env_pathname, true)
 
 	// v0.1: thumbs down feature: deletes message(s) that exceed(s) configured thumbs down count.

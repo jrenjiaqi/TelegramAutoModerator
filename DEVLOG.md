@@ -16,6 +16,7 @@
 - `[org]` Refactored common action out of `v0.1`, added space for top-level functions, reuse common action in `v0.2`
 - `[msc]` Added configuration files to turn features, debug, settings on/off without rebuilding program.
 - `[ft.]` Setup API key, system prompt to connect to Claude API ([read the docs](https://docs.anthropic.com/en/api/messages)).
+- `[ft.]` Connect to Claude API using HTTP POST.
 
 ## 2. Tech Debt
 - nothing here; let's hope it stays that way.
