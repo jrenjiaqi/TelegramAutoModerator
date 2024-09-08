@@ -12,6 +12,8 @@
 cd code
 touch .env
 touch .conf
+mkdir claude/prompts
+touch claude/prompts/systemPrompt.txt
 ```
 
 3. paste into the `.env` file:
@@ -34,7 +36,9 @@ THUMBS_DOWN_COUNT_TO_DELETE_MSG=<int>
 DEBUG_MODE=<true/false>
 ```
 
-5. then run:
+5. paste the system prompt into the `claude/prompts/systemPrompt.txt` file, **as one single line**.
+
+6. then run:
 `go run .`
 
 ## 2. Setup for Deployment
@@ -46,6 +50,8 @@ mkdir bin
 cd bin
 touch .env
 touch .conf
+mkdir claude/prompts
+touch claude/prompts/systemPrompt.txt
 ```
 
 3. paste into the `.env` file:
@@ -68,13 +74,15 @@ THUMBS_DOWN_COUNT_TO_DELETE_MSG=<int>
 DEBUG_MODE=<true/false>
 ```
 
-5. then run from `/`
+5. paste the system prompt into the `claude/prompts/systemPrompt.txt` file, **as one single line**.
+
+6. then run from `/`
 ```bash
 cd code
 go build -o ../bin
 ```
 
-6. then run from `/bin`
+7. then run from `/bin`
 ```bash
 ./MiniChatSentryBot
 ```
