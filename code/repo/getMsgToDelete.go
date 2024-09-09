@@ -15,11 +15,11 @@ func get_message_id_struct_from_uid(uid string) structs.Telegram_message_id {
 	split_string := strings.Split(uid, ":")
 	chat_id, err := strconv.ParseInt(split_string[0], 10, 64)
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	message_id, err := strconv.Atoi(split_string[1])
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	return structs.Telegram_message_id{Chat_id: chat_id, Message_id: message_id}
 }

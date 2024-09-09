@@ -23,7 +23,10 @@ func Get_msgs_from_updates(
 		// something was not ok with the GET request; it is beyond program's control.
 		log.Fatal("Get update failed; something external to this program is not working.")
 	} else {
-		for _, update := range telegram_bot_updates.Result {
+		for index, update := range telegram_bot_updates.Result {
+			if update.Message.Text == "" && update.Message.Caption == "" { // panic on invalid object (no text AND no caption)
+				log.Panicf("Malformed object on index %d with Message ID %d", index, update.Message.MessageId)
+			}
 			// add each message into the message slice.
 			*message_objects_ptr = append(*message_objects_ptr, update.Message)
 		}

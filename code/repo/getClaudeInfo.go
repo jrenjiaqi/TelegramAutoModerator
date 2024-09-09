@@ -14,7 +14,7 @@ func Get_claude_info(api_env_file string, system_prompt_pathname string, debug_m
 	claude_api_key := utils.Get_env_value_or_err("CLAUDE_API_KEY")
 	system_prompt_bytes, err := os.ReadFile(system_prompt_pathname)
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	if debug_mode {
 		// log last 8 characters of API key.

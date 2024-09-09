@@ -1,6 +1,7 @@
 package repo
 
 import (
+	"log"
 	"strconv"
 
 	"github.com/jrenjq/MiniChatSentryBot/utils"
@@ -29,15 +30,15 @@ func Get_thumbs_down_config_values_from_env_file(
 	utils.Load_env_file(env_file)
 	thumbs_down_count, err := strconv.Atoi(utils.Get_env_value_or_err(thumbs_down_count_var_name))
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	debug_mode, err := strconv.ParseBool(utils.Get_env_value_or_err(debug_mode_var_name))
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	thumbs_down_feature_on, err := strconv.ParseBool(utils.Get_env_value_or_err(thumbs_down_feature_on_var_name))
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	return thumbs_down_count, debug_mode, thumbs_down_feature_on
 }

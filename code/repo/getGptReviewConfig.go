@@ -1,6 +1,7 @@
 package repo
 
 import (
+	"log"
 	"strconv"
 
 	"github.com/jrenjq/MiniChatSentryBot/utils"
@@ -26,11 +27,11 @@ func Get_gpt_review_config_values_from_env_file(
 	utils.Load_env_file(env_file)
 	debug_mode, err := strconv.ParseBool(utils.Get_env_value_or_err(debug_mode_var_name))
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	feature_on, err := strconv.ParseBool(utils.Get_env_value_or_err(gpt_review_feature_on_var_name))
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	return debug_mode, feature_on
 }

@@ -35,7 +35,7 @@ func Thumbs_down_feature(
 		// delete said messages via Telegram Bot API.
 		count, err := repo.Delete_messages(uri_env_pathname, &messages_to_delete, debug_mode)
 		if err != nil {
-			panic(err)
+			log.Panic(err)
 		}
 		if isLogged {
 			log.Printf("DELETED %d THUMBS DOWN MESSAGE(S).\n", count)
