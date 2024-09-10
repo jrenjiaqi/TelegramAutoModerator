@@ -111,6 +111,22 @@ func Gpt_review_feature(
 			log.Printf("DELETED/MARKED-FOR_DELETION: %d/%d\n\n",
 				len(deleted_messages_ids), len(message_naughty_list))
 		}
+
+		// append the deleted messages unique identifiers (uid) to the log so it can be read in the next run ...
+		// ... and already deleted messages won't be deleted again.
+		// Q: "Isn't this a database?"
+		// A: "Anything is a database if we define it liberally enough."
+		// Q: "So it is a database, isn't it?"
+		// A: "If a database doesn't have to be set up and there's no one around like you to ask questions, is it still a database?"
+		// Q: "It is a database, then? You said there'll be no databases and this is a database."
+		// A: "I literally can't hear you..."
+		for _, deleted_message_uid_struct := range deleted_messages_ids {
+			utils.Append_to_file(
+				deleted_messages_log_pathname,
+				deleted_message_uid_struct.Get_uid_string(),
+			)
+		}
+
 	}
 }
 
