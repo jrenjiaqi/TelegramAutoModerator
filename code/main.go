@@ -10,7 +10,7 @@ func main() {
 	uri_env_pathname := "./.env"                                  // environment pathname with uri information.
 	api_env_pathname := "./.env"                                  // environment pathname with Claude API key.
 	system_prompt_pathname := "./claude/prompts/systemPrompt.txt" // system prompt is SENSITIVE and should NOT be made public.
-	deleted_messages_log := "./deletedMessages.log"               // holds previouosly deleted messages.
+	processed_messages_log := "./processedMessages.log"           // holds a log of already-processed messages from a previous run.
 
 	// get updates (e.g. messages, reactions) about the bot, from the Telegram Bot API.
 	// note: should call only once per execution. Telegram Bot API will limit consecutive calls with truncated information.
@@ -33,7 +33,7 @@ func main() {
 		telegram_bot_updates,
 		api_env_pathname,
 		uri_env_pathname,
-		deleted_messages_log,
+		processed_messages_log,
 		system_prompt_pathname,
 		true,
 	)

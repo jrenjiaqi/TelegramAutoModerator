@@ -15,6 +15,9 @@ func Append_to_file(pathname string, text string) {
 	if _, err := f.Write([]byte(text)); err != nil {
 		log.Fatal(err)
 	}
+	if _, err := f.Write([]byte("\n")); err != nil {
+		log.Fatal(err)
+	}
 	if err := f.Close(); err != nil {
 		log.Fatal(err)
 	}

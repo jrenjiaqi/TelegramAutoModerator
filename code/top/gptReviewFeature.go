@@ -17,7 +17,7 @@ func Gpt_review_feature(
 	telegram_bot_updates *structs.Update_response,
 	api_env_pathname string,
 	uri_env_pathname string,
-	deleted_messages_log_pathname string,
+	processed_messages_log_pathname string,
 	system_prompt_pathname string,
 	is_logged bool,
 ) {
@@ -41,16 +41,15 @@ func Gpt_review_feature(
 
 		// extract messages from the monolith Update object.
 		messages_slice_ptr := repo.Get_msgs_from_updates(telegram_bot_updates, is_logged)
+		// remove previously deleted messages from being sent to Claude...
+		// this is because updates is simply what the bot has seen in the past 24 hours...
+		// and already deleted messages will still appear as an 'update'.
+		previously_deleted_messages := repo.Get_string_slice_from_file(processed_messages_log_pathname, "\n")
+		remove_alr_processed_msgs_from_message_slice(messages_slice_ptr, &previously_deleted_messages, debug_mode)
 		if is_logged {
 			log.Printf("MESSAGES FOR CLAUDE: %+v\n\n",
 				strings.ReplaceAll(fmt.Sprintf("%+v", messages_slice_ptr), "\n", ""))
 		}
-
-		// remove previously deleted messages from being sent to Claude...
-		// this is because updates is simply what the bot has seen in the past 24 hours...
-		// and already deleted messages will still appear as an 'update'.
-		previously_deleted_messages := repo.Get_string_slice_from_file(deleted_messages_log_pathname, "\n")
-		remove_prev_deleted_msgs_from_message_slice(messages_slice_ptr, &previously_deleted_messages, debug_mode)
 
 		// ask Claude LLM to rate the message on scam likelihood and inappropriateness on 1-10.
 		// if it is greater than or equal (gte) to 6, add the message to a naughty list.
@@ -121,21 +120,20 @@ func Gpt_review_feature(
 				len(deleted_messages_ids), len(message_naughty_list))
 		}
 
-		// append the deleted messages unique identifiers (uid) to the log so it can be read in the next run ...
-		// ... and already deleted messages won't be deleted again.
-		// Q: "Isn't this a database?"
+		// append the messages' unique identifiers (uid) to the log so it can be read in the next run ...
+		// ... and the already processed message won't be deleted again.
+		// Q: "Wait. You're writing to a file and reading it on each run. Isn't this a database?"
 		// A: "Anything is a database if we define it liberally enough."
 		// Q: "So it is a database, isn't it?"
 		// A: "If a database doesn't have to be set up and there's no one around like you to ask questions, is it still a database?"
-		// Q: "It is a database, then? You said there'll be no databases and this is a database."
-		// A: "I literally can't hear you..."
-		for _, deleted_message_uid_struct := range deleted_messages_ids {
+		// Q: "It is a database, then? You said there'll be no databases and this is a database (see README.md)."
+		// A: "I'm going to plug my ears with my fingers and just go lalalala...'"
+		for _, message := range *messages_slice_ptr {
 			utils.Append_to_file(
-				deleted_messages_log_pathname,
-				deleted_message_uid_struct.Get_uid_string(),
+				processed_messages_log_pathname,
+				message.Get_uid_string(),
 			)
 		}
-
 	}
 }
 
@@ -201,24 +199,24 @@ func add_to_naughty_list_messages_rated_gte(
 	}
 }
 
-// Helper function: removes previously deleted messages from message slice.
-func remove_prev_deleted_msgs_from_message_slice(
+// Helper function: removes previously processed messages from message slice.
+func remove_alr_processed_msgs_from_message_slice(
 	messages_slice_ptr *[]structs.MessageObject,
 	previously_deleted_messages *[]string,
 	debug_mode bool,
 ) {
-	// make a set of previously deleted messages' unique identifiers (uids).
+	// make a set of previously processed messages' unique identifiers (uids).
 	// from: https://stackoverflow.com/a/13520159
-	del_msgs_set := make(map[string]struct{}) // the value struct{} is nothing and consumes no space.
+	alr_processed_msgs_set := make(map[string]struct{}) // the value struct{} is nothing and consumes no space.
 	for _, del_msg := range *previously_deleted_messages {
-		del_msgs_set[del_msg] = struct{}{}
+		alr_processed_msgs_set[del_msg] = struct{}{}
 	}
 
 	// get indices to remove from message slice.
 	indices_to_remove := []int{}
 	for index, message := range *messages_slice_ptr {
 		message_uid := message.Get_uid_string()
-		_, isPresent := del_msgs_set[message_uid]
+		_, isPresent := alr_processed_msgs_set[message_uid]
 		if isPresent {
 			indices_to_remove = append(indices_to_remove, index)
 		}
@@ -236,7 +234,7 @@ func remove_prev_deleted_msgs_from_message_slice(
 		*messages_slice_ptr = slices.Delete(*messages_slice_ptr, index, index+1)
 		if debug_mode {
 			// note *p[0] -> index the pointer; (*p)[0] -> index the thing deferenced from pointer. (C nostalgia).
-			log.Printf("REMOVE ALREADY DELETED MESSAGE[%d]: %+v\n\n", index, (*messages_slice_ptr)[index])
+			log.Printf("REMOVE ALREADY PROCESSED MESSAGE[%d]: %+v\n\n", index, (*messages_slice_ptr)[index])
 		}
 	}
 }

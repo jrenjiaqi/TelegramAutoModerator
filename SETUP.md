@@ -80,11 +80,10 @@ DEBUG_MODE=<true/false>
 
 6. then run from `/`
 ```bash
-cd code
-go build -o ../bin
+go build -o ./bin
 ```
 
-7. then run from `/bin`
+7. and run from `/` to run the bot once.
 ```bash
 ./MiniChatSentryBot
 ```
