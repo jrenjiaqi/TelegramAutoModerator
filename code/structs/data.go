@@ -1,5 +1,7 @@
 package structs
 
+import "strconv"
+
 type Data struct {
 	UpdateId        int             `json:"update_id"`
 	Message         MessageObject   `json:"message,omitempty"`
@@ -18,6 +20,12 @@ type MessageObject struct {
 	PhotoEntities   []PhotoEntities   `json:"photo,omitempty"`
 	Caption         string            `json:"caption,omitempty"`
 	CaptionEntities []CaptionEntities `json:"caption_entities,omitempty"`
+}
+
+// get a unique message identifier via combining chat_id and message_id strings.
+func (msg *MessageObject) Get_uid_string() string {
+	BASE := 10
+	return strconv.FormatInt(msg.Chat.ID, BASE) + ":" + strconv.FormatInt(int64(msg.MessageId), BASE)
 }
 
 type PhotoEntities struct {

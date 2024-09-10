@@ -45,11 +45,54 @@ func build_delete_base_uri_string(
 }
 
 /*
-Deletes messages.
+Deletes a single message.
 
 parameters:
-  - delete_uri_env_file_path string,
-  - messages_to_delete *[]structs.Telegram_message_id,
+  - delete_uri_env_file_path string: the environment file that contains base delete uri string.
+  - message_to_delete *structs.MessageObject: the message to delete.
+  - debug_mode bool: debug mode.
+
+returrns:
+  - bool: was delete message request successful (note: does not guarantee message deleted).
+*/
+func Delete_one_message(
+	delete_uri_env_file_path string,
+	message_to_delete *structs.MessageObject,
+	debug_mode bool,
+) bool {
+	chat_id_placeholder := "<chat_id>"
+	message_id_placeholder := "<message_id>"
+	delete_base_uri_string := Get_delete_base_uri_from_env_file(delete_uri_env_file_path)
+	delete_uri_string := build_delete_base_uri_string(
+		delete_base_uri_string,
+		chat_id_placeholder,
+		message_to_delete.Chat.ID,
+		message_id_placeholder,
+		message_to_delete.MessageId,
+	)
+	if debug_mode {
+		log.Println(delete_uri_string)
+	}
+	delete_JSON_struct_ptr := new(structs.Delete_response)                   // or &structs.Update_response{}
+	err := utils.Http_GET_JSON(delete_uri_string, 5, delete_JSON_struct_ptr) // send GET request to delete message.
+	if err != nil {
+		log.Panicf("Something wrong with delete at: %s!\n\n", delete_base_uri_string) // something went wrong with sending the request.
+	}
+	if !delete_JSON_struct_ptr.Ok {
+		return false // request is fine, but message could not be deleted for some reason (already deleted etc.)
+	}
+	if debug_mode {
+		log.Println(delete_JSON_struct_ptr)
+	}
+	return true
+}
+
+/*
+Deletes a slice of messages, given as Telegram_message_id structs.
+
+parameters:
+  - delete_uri_env_file_path string: the environment file that contains base delete uri string.
+  - messages_to_delete *[]structs.Telegram_message_id: the messages to delete.
 
 returrns:
   - int: number of delete GET requests sent.

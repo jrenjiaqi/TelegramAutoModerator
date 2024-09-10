@@ -12,6 +12,7 @@
 cd code
 touch .env
 touch .conf
+touch deletedMessages.log
 mkdir claude/prompts
 touch claude/prompts/systemPrompt.txt
 ```
@@ -50,6 +51,7 @@ mkdir bin
 cd bin
 touch .env
 touch .conf
+touch deletedMessages.log
 mkdir claude/prompts
 touch claude/prompts/systemPrompt.txt
 ```
