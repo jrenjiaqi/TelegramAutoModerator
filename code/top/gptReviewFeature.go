@@ -22,11 +22,14 @@ func Gpt_review_feature(
 	is_logged bool,
 ) {
 	// get config setting(s) for this feature.
-	debug_mode, feature_is_on := repo.Get_gpt_review_config_values_from_env_file(
-		".conf",
-		"GPT_REVIEW_FEATURE_DEBUG_MODE",
-		"GPT_REVIEW_FEATURE_ON",
-	)
+	debug_mode, feature_is_on, scam_rating_gte, inappropriate_rating_gte :=
+		repo.Get_gpt_review_config_values_from_env_file(
+			".conf",
+			"GPT_REVIEW_FEATURE_DEBUG_MODE",
+			"GPT_REVIEW_FEATURE_ON",
+			"SCAM_RATING_GTE",
+			"INAPPROPRIATE_RATING_GTE",
+		)
 	// configuration file variable decides whether to run this feature or not.
 	if feature_is_on {
 		// load Claude API key and system prompt string.
@@ -82,7 +85,13 @@ func Gpt_review_feature(
 			}
 			// messages with ratings on either scam or inappropriateness greater than or equal (gte) ...
 			// ... to specified ratings go into the naughty list.
-			add_to_naughty_list_messages_rated_gte(6, 6, message, claude_ratings, &message_naughty_list)
+			add_to_naughty_list_messages_rated_gte(
+				scam_rating_gte,
+				inappropriate_rating_gte,
+				message,
+				claude_ratings,
+				&message_naughty_list,
+			)
 		}
 		if is_logged {
 			log.Printf("NAUGHTY LIST: %+v\n\n",
