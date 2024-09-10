@@ -29,12 +29,22 @@ MESSAGE_REACTIONS_NAME=message_reaction
 DELETE_MESSAGE_PATH=deleteMessage
 CHAT_ID_NAME=chat_id
 MESSAGE_ID_NAME=message_id
+
+
+CLAUDE_API_URI=<Claude API URI Goes Here>
+CLAUDE_API_KEY=<Claude API Key Goes Here>
 ```
 
 4. paste into the `.conf` file:
 ```
 THUMBS_DOWN_COUNT_TO_DELETE_MSG=<int>
-DEBUG_MODE=<true/false>
+THUMBS_DOWN_FEATURE_DEBUG_MODE=<true/false>
+THUMBS_DOWN_FEATURE_ON=<true/false>
+
+GPT_REVIEW_FEATURE_DEBUG_MODE=<true/false>
+GPT_REVIEW_FEATURE_ON=<true/false>
+SCAM_RATING_GTE=<int between 1 to 10>
+INAPPROPRIATE_RATING_GTE=<int between 1 to 10>
 ```
 
 5. paste the system prompt into the `claude/prompts/systemPrompt.txt` file, **as one single line**.
@@ -68,12 +78,22 @@ MESSAGE_REACTIONS_NAME=message_reaction
 DELETE_MESSAGE_PATH=deleteMessage
 CHAT_ID_NAME=chat_id
 MESSAGE_ID_NAME=message_id
+
+
+CLAUDE_API_URI=<Claude API URI Goes Here>
+CLAUDE_API_KEY=<Claude API Key Goes Here>
 ```
 
 4. paste into the `.conf` file:
 ```
 THUMBS_DOWN_COUNT_TO_DELETE_MSG=<int>
-DEBUG_MODE=<true/false>
+THUMBS_DOWN_FEATURE_DEBUG_MODE=<true/false>
+THUMBS_DOWN_FEATURE_ON=<true/false>
+
+GPT_REVIEW_FEATURE_DEBUG_MODE=<true/false>
+GPT_REVIEW_FEATURE_ON=<true/false>
+SCAM_RATING_GTE=<int between 1 to 10>
+INAPPROPRIATE_RATING_GTE=<int between 1 to 10>
 ```
 
 5. paste the system prompt into the `claude/prompts/systemPrompt.txt` file, **as one single line**.

@@ -6,6 +6,8 @@
 - Originally developed to manage a university Telegram group.
 
 ## 2. What Can It Do?
+- `v0.2`: Deletes scam and inappropriate messages using Claude3.5 Sonnet API. `[automod]`
+
 - `v0.1`: **[[CURRENTLY DEFUNCT due to undocumented Telegram Bot API changes, which removes reactions from update responses]]** the bot finds messages with **3 or more** counts of "👎" reactions, and **deletes that message** `[downvote]`
 
 
