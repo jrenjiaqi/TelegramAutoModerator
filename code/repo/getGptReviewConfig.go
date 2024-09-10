@@ -14,10 +14,14 @@ parameters:
   - env_file string: name of environment file that contains needed info.
   - debug_mode_var_name string: name of variable in said environment file for debug mode.
   - gpt_review_feature_on_var_name string: name of variable in said environment file for feature on.
+  - scam_rating_gte_var_name string: name of variable in said environment file for scam rating gte.
+  - inappropriate_rating_gte_var_name string: name of variable in said environment file for inappropriateness rating gte.
 
 returns:
   - bool: debug mode
   - bool: feature on
+  - int: scam rating gte
+  - int: inappropriateness rating gte
 */
 func Get_gpt_review_config_values_from_env_file(
 	env_file string,

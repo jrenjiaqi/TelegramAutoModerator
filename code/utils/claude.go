@@ -20,6 +20,21 @@ type ClaudeMessage struct {
 	Content string `json:"content"`
 }
 
+/*
+Send to Claude one message, and receive a response via mutation of parameter.
+
+parameters:
+  - response_struct_ptr interface{}: struct to be mutated into Claude's response.
+  - claude_api_uri string: Claude API endpoint.
+  - claude_api_key string: Claude API key.
+  - system_prompt string: system prompt for Claude to generate formatted response.
+  - text_to_send string: text to send to Claude.
+  - response_timeout_seconds int: number of seconds until the request timeouts.
+  - debug_mode bool: true for debug information and false otherwise.
+
+mutates:
+  - response_struct_ptr interface{}.
+*/
 func Send_to_claude_one_message(
 	response_struct_ptr interface{},
 	claude_api_uri string,

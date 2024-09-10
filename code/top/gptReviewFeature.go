@@ -129,7 +129,7 @@ func Gpt_review_feature(
 		// Q: "It is a database, then? You said there'll be no databases and this is a database (see README.md)."
 		// A: "I'm going to plug my ears with my fingers and just go lalalala...'"
 		for _, message := range *messages_slice_ptr {
-			utils.Append_to_file(
+			utils.Append_to_file_newline(
 				processed_messages_log_pathname,
 				message.Get_uid_string(),
 			)

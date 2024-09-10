@@ -28,7 +28,7 @@ func main() {
 		true,
 	)
 
-	// // v0.2: use Claude LLM to review message for scam and inappropriateness.
+	// // v0.2: use Claude LLM to review message for scam and inappropriateness, delete it if exceeds configured value.
 	top.Gpt_review_feature(
 		telegram_bot_updates,
 		api_env_pathname,

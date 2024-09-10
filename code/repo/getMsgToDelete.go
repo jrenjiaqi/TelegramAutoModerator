@@ -24,6 +24,17 @@ func get_message_id_struct_from_uid(uid string) structs.Telegram_message_id {
 	return structs.Telegram_message_id{Chat_id: chat_id, Message_id: message_id}
 }
 
+/*
+Gets messages that are eligible for deletion based on thumbs down count.
+
+parameters:
+  - get_response_JSON *structs.Update_response: the Update response retrieved from Telegram Bot API.
+  - thumbs_down_count_to_del_msg int: delete the message if thumbs down count is greater than or equals this.
+  - is_debug_mode bool: true for debugging information, false otherwise.
+
+returns:
+  - []structs.Telegram_message_id: a struct of Telegram message ids (structs made of just chat id and message id).
+*/
 func Get_messages_to_delete_from_JSON(
 	get_response_JSON *structs.Update_response,
 	thumbs_down_count_to_del_msg int,
