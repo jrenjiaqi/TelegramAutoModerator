@@ -12,12 +12,12 @@ Load values from .env file into the system environment.
 note: .env file must be in the same dir as program entrypoint.
 
 Parameters:
-  - filename string: name of environment file
+  - pathname string: name of environment file
 */
-func Load_env_file(filename string) {
+func Load_env_file(pathname string) {
 	// if there is an err loading the .env file, log it.
-	if err := godotenv.Load(filename); err != nil {
-		log.Printf("No file %s found", filename)
+	if err := godotenv.Load(pathname); err != nil {
+		log.Printf("No file %s found", pathname)
 	}
 }
 

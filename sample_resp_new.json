@@ -1,0 +1,321 @@
+{
+    "ok": true,
+    "result": [
+      {
+        "update_id": 60738731,
+        "message": {
+          "message_id": 6,
+          "from": {
+            "id": 829546973,
+            "is_bot": false,
+            "first_name": "xxx",
+            "username": "xxx"
+          },
+          "chat": {
+            "id": -4598787604,
+            "title": "BotProvingGrounds",
+            "type": "group",
+            "all_members_are_administrators": true
+          },
+          "date": 1725869625,
+          "forward_origin": {
+            "type": "hidden_user",
+            "sender_user_name": "xxx",
+            "date": 1725529788
+          },
+          "forward_sender_name": "xxx",
+          "forward_date": 1725529788,
+          "photo": [
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA3MAAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZ4",
+              "file_size": 1279,
+              "width": 90,
+              "height": 47
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA20AAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZy",
+              "file_size": 14562,
+              "width": 320,
+              "height": 168
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA3gAAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZ9",
+              "file_size": 52209,
+              "width": 800,
+              "height": 420
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA3kAAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZ-",
+              "file_size": 64611,
+              "width": 1200,
+              "height": 630
+            }
+          ],
+          "caption": "Join me in Shopee Kiap Kiap & win Shopee coins! https://shp.ee/qpiuu42ymn5",
+          "caption_entities": [
+            {
+              "offset": 48,
+              "length": 26,
+              "type": "url"
+            }
+          ]
+        }
+      },
+      {
+        "update_id": 60738732,
+        "message": {
+          "message_id": 7,
+          "from": {
+            "id": 829546973,
+            "is_bot": false,
+            "first_name": "xxx",
+            "username": "xxx"
+          },
+          "chat": {
+            "id": -4598787604,
+            "title": "BotProvingGrounds",
+            "type": "group",
+            "all_members_are_administrators": true
+          },
+          "date": 1725869625,
+          "forward_origin": {
+            "type": "hidden_user",
+            "sender_user_name": "xxx",
+            "date": 1725693477
+          },
+          "forward_sender_name": "xxx",
+          "forward_date": 1725693477,
+          "text": "Hey there, Im George and I got something for you that could help land your next job promotion or boost your earnings. Our Advanced Certificate in Digital Marketing 🙂\n\nWith the government top-up of $4000 Skillsfuture Credits and $1,000 Training Commitment Award or Training Allowance (if you are eligible), now is really a perfect time now to learn new skills to stay ahead in in the digital age.\n\nIf you are interested in this. May I share the schedule with you"
+        }
+      },
+      {
+        "update_id": 60738733,
+        "message": {
+          "message_id": 8,
+          "from": {
+            "id": 829546973,
+            "is_bot": false,
+            "first_name": "xxx",
+            "username": "xxx"
+          },
+          "chat": {
+            "id": -4598787604,
+            "title": "BotProvingGrounds",
+            "type": "group",
+            "all_members_are_administrators": true
+          },
+          "date": 1725870337,
+          "forward_origin": {
+            "type": "hidden_user",
+            "sender_user_name": "xxx",
+            "date": 1725529788
+          },
+          "forward_sender_name": "xxx",
+          "forward_date": 1725529788,
+          "photo": [
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA3MAAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZ4",
+              "file_size": 1279,
+              "width": 90,
+              "height": 47
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA20AAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZy",
+              "file_size": 14562,
+              "width": 320,
+              "height": 168
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA3gAAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZ9",
+              "file_size": 52209,
+              "width": 800,
+              "height": 420
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMGZt6uOe8vwfL35BQzJQrwwW7DwgADdb0xG-LUyFbWmlScc6TWxgEAAwIAA3kAAzYE",
+              "file_unique_id": "AQADdb0xG-LUyFZ-",
+              "file_size": 64611,
+              "width": 1200,
+              "height": 630
+            }
+          ],
+          "caption": "Join me in Shopee Kiap Kiap & win Shopee coins! https://shp.ee/qpiuu42ymn5",
+          "caption_entities": [
+            {
+              "offset": 48,
+              "length": 26,
+              "type": "url"
+            }
+          ]
+        }
+      },
+      {
+        "update_id": 60738734,
+        "message": {
+          "message_id": 9,
+          "from": {
+            "id": 829546973,
+            "is_bot": false,
+            "first_name": "xxx",
+            "username": "xxx"
+          },
+          "chat": {
+            "id": -4598787604,
+            "title": "BotProvingGrounds",
+            "type": "group",
+            "all_members_are_administrators": true
+          },
+          "date": 1725882597,
+          "text": "Hey there, Im George and I got something for you that could help land your next job promotion or boost your earnings. Our Advanced Certificate in Digital Marketing 🙂\n\nWith the government top-up of $4000 Skillsfuture Credits and $1,000 Training Commitment Award or Training Allowance (if you are eligible), now is really a perfect time now to learn new skills to stay ahead in in the digital age.\n\nIf you are interested in this. May I share the schedule with you"
+        }
+      },
+      {
+        "update_id": 60738735,
+        "my_chat_member": {
+          "chat": {
+            "id": -4598787604,
+            "title": "BotProvingGrounds",
+            "type": "group",
+            "all_members_are_administrators": true
+          },
+          "from": {
+            "id": 829546973,
+            "is_bot": false,
+            "first_name": "xxx",
+            "username": "xxx"
+          },
+          "date": 1725882639,
+          "old_chat_member": {
+            "user": {
+              "id": 7320741063,
+              "is_bot": true,
+              "first_name": "MiniChatSentry",
+              "username": "MiniChatSentryBot"
+            },
+            "status": "member"
+          },
+          "new_chat_member": {
+            "user": {
+              "id": 7320741063,
+              "is_bot": true,
+              "first_name": "MiniChatSentry",
+              "username": "MiniChatSentryBot"
+            },
+            "status": "administrator",
+            "can_be_edited": false,
+            "can_manage_chat": true,
+            "can_change_info": true,
+            "can_delete_messages": true,
+            "can_invite_users": true,
+            "can_restrict_members": true,
+            "can_pin_messages": true,
+            "can_promote_members": false,
+            "can_manage_video_chats": true,
+            "can_post_stories": false,
+            "can_edit_stories": false,
+            "can_delete_stories": false,
+            "is_anonymous": false,
+            "can_manage_voice_chats": true
+          }
+        }
+      },
+      {
+        "update_id": 60738736,
+        "message": {
+          "message_id": 10,
+          "from": {
+            "id": 829546973,
+            "is_bot": false,
+            "first_name": "xxx",
+            "username": "xxx"
+          },
+          "chat": {
+            "id": -4598787604,
+            "title": "BotProvingGrounds",
+            "type": "group",
+            "all_members_are_administrators": true
+          },
+          "date": 1725948301,
+          "forward_origin": {
+            "type": "hidden_user",
+            "sender_user_name": "xxx",
+            "date": 1725529788
+          },
+          "forward_sender_name": "xxx",
+          "forward_date": 1725529788,
+          "photo": [
+            {
+              "file_id": "AgACAgUAAxkBAAMKZt_hjfeWTtz90z4veXXgRvTac1EAAnW9MRvi1MhW1ppUnHOk1sYBAAMCAANzAAM2BA",
+              "file_unique_id": "AQADdb0xG-LUyFZ4",
+              "file_size": 1279,
+              "width": 90,
+              "height": 47
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMKZt_hjfeWTtz90z4veXXgRvTac1EAAnW9MRvi1MhW1ppUnHOk1sYBAAMCAANtAAM2BA",
+              "file_unique_id": "AQADdb0xG-LUyFZy",
+              "file_size": 14562,
+              "width": 320,
+              "height": 168
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMKZt_hjfeWTtz90z4veXXgRvTac1EAAnW9MRvi1MhW1ppUnHOk1sYBAAMCAAN4AAM2BA",
+              "file_unique_id": "AQADdb0xG-LUyFZ9",
+              "file_size": 52209,
+              "width": 800,
+              "height": 420
+            },
+            {
+              "file_id": "AgACAgUAAxkBAAMKZt_hjfeWTtz90z4veXXgRvTac1EAAnW9MRvi1MhW1ppUnHOk1sYBAAMCAAN5AAM2BA",
+              "file_unique_id": "AQADdb0xG-LUyFZ-",
+              "file_size": 64611,
+              "width": 1200,
+              "height": 630
+            }
+          ],
+          "caption": "Join me in Shopee Kiap Kiap & win Shopee coins! https://shp.ee/qpiuu42ymn5",
+          "caption_entities": [
+            {
+              "offset": 48,
+              "length": 26,
+              "type": "url"
+            }
+          ]
+        }
+      },
+      {
+        "update_id": 60738737,
+        "message": {
+          "message_id": 11,
+          "from": {
+            "id": 829546973,
+            "is_bot": false,
+            "first_name": "xxx",
+            "username": "xxx"
+          },
+          "chat": {
+            "id": -4598787604,
+            "title": "BotProvingGrounds",
+            "type": "group",
+            "all_members_are_administrators": true
+          },
+          "date": 1725948311,
+          "forward_origin": {
+            "type": "hidden_user",
+            "sender_user_name": "xxx",
+            "date": 1725693477
+          },
+          "forward_sender_name": "xxx",
+          "forward_date": 1725693477,
+          "text": "Hey there, Im George and I got something for you that could help land your next job promotion or boost your earnings. Our Advanced Certificate in Digital Marketing 🙂\n\nWith the government top-up of $4000 Skillsfuture Credits and $1,000 Training Commitment Award or Training Allowance (if you are eligible), now is really a perfect time now to learn new skills to stay ahead in in the digital age.\n\nIf you are interested in this. May I share the schedule with you"
+        }
+      }
+    ]
+  }

@@ -1,3 +1,5 @@
 .env*
-.conf*
 bin/*
+code/claude/prompts/*
+!code/claude/prompts/README.md
+*.log
