@@ -107,3 +107,8 @@ go build -o ./bin
 ```bash
 ./MiniChatSentryBot
 ```
+
+8. or install `PM2` and run from `/` to run the bot as a cron job (every 1 second).
+```bash
+pm2 start MiniChatSentryBot --no-autorestart --instances 1 --cron "* * * * *"
+```
